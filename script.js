@@ -84,4 +84,26 @@ todoListElement.appendChild(listItem);
 
 }
 
+  const myTodoList = new ToDoList(); 
+
+
+const addButton = document.getElementById("addButton");
+
+const todoInput = document.getElementById("todoInput");
+
+
+addButton.addEventListener("click", () => {
+  const todoText = todoInput.value.trim();
+
+  if (todoText) {
+
+    myTodoList.addTodo(todoText); 
+
+    todoInput.value = ""; 
+  }
+});
+
+
+myTodoList.renderTodoList();
+
 
